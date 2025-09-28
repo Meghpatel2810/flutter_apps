@@ -2,7 +2,7 @@
 
 A comprehensive collection of educational and utility Flutter applications designed for learning and practical use. This project serves as a hub containing multiple mini-applications, each focusing on different aspects of mobile development and user functionality.
 
-![Flutter Apps Hub Home Screen](assets/screenshots/home_screen.png)
+![Flutter Apps Hub Home Screen](assets/Home Page.png)
 
 ## 🚀 Features Overview
 
