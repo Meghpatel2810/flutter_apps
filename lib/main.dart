@@ -9,6 +9,8 @@ import 'package:flutter_apps/image_spelling_match_app/image_spelling_match_scree
 import 'package:flutter_apps/emi_calculator_app/emi_calculator_screen.dart';
 // Import path for the Resume Maker App
 import 'package:flutter_apps/resume_maker_app/resume_maker_screen.dart';
+// Import path for the IT Quiz App
+import 'package:flutter_apps/it_quiz_app/it_quiz_screen.dart';
 
 void main() {
   runApp(const MainApp());
@@ -102,6 +104,16 @@ class HubScreen extends StatelessWidget {
             color: Colors.blue,
             onTap: () {
                 Navigator.push(context, MaterialPageRoute(builder: (_) => const ResumeMakerScreen()));
+            },
+          ),
+          // IT Quiz App
+          _buildAppCard(
+            context,
+            title: 'IT Quiz',
+            icon: Icons.quiz,
+            color: Colors.cyan,
+            onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (_) => const ITQuizScreen()));
             },
           ),
           ],
