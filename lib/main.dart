@@ -7,6 +7,8 @@ import 'package:flutter_apps/math_learning_app/math_learning_screen.dart';
 import 'package:flutter_apps/image_spelling_match_app/image_spelling_match_screen.dart';
 // Import path for the EMI Calculator App
 import 'package:flutter_apps/emi_calculator_app/emi_calculator_screen.dart';
+// Import path for the Resume Maker App
+import 'package:flutter_apps/resume_maker_app/resume_maker_screen.dart';
 
 void main() {
   runApp(const MainApp());
@@ -90,6 +92,16 @@ class HubScreen extends StatelessWidget {
             color: Colors.teal,
             onTap: () {
                 Navigator.push(context, MaterialPageRoute(builder: (_) => const EMICalculatorScreen()));
+            },
+          ),
+          // Resume Maker App
+          _buildAppCard(
+            context,
+            title: 'Resume Maker',
+            icon: Icons.description,
+            color: Colors.blue,
+            onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (_) => const ResumeMakerScreen()));
             },
           ),
           ],
