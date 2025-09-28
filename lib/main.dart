@@ -22,7 +22,7 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Apps Collection',
+      title: "Megh's Flutter Apps Collection",
       theme: ThemeData(
         primarySwatch: Colors.indigo,
         visualDensity: VisualDensity.adaptivePlatformDensity,
@@ -40,7 +40,7 @@ class HubScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Flutter Apps Hub'),
+        title: const Text("Megh's Flutter Apps Hub"),
         backgroundColor: Colors.indigo,
         foregroundColor: Colors.white,
       ),
