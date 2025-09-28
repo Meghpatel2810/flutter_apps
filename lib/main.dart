@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 // Import path for the Kids Learning App's main screen
 import 'package:flutter_apps/kids_learning_application/screens/kids_hub_screen.dart';
+// Import path for the Math Learning App
+import 'package:flutter_apps/math_learning_app/math_learning_screen.dart';
 
 void main() {
   runApp(const MainApp());
@@ -46,7 +48,16 @@ class HubScreen extends StatelessWidget {
                 Navigator.push(context, MaterialPageRoute(builder: (_) => const KidsHubScreen()));
             },
           ),
-          // You can add cards for your other apps here in the future
+          // Math Learning App
+          _buildAppCard(
+            context,
+            title: 'Math Learning App',
+            icon: Icons.calculate,
+            color: Colors.orange,
+            onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (_) => const MathLearningScreen()));
+            },
+          ),
         ],
       ),
     );
@@ -66,4 +77,3 @@ class HubScreen extends StatelessWidget {
     );
   }
 }
-
