@@ -5,6 +5,8 @@ import 'package:flutter_apps/kids_learning_application/screens/kids_hub_screen.d
 import 'package:flutter_apps/math_learning_app/math_learning_screen.dart';
 // Import path for the Image Spelling Match App
 import 'package:flutter_apps/image_spelling_match_app/image_spelling_match_screen.dart';
+// Import path for the EMI Calculator App
+import 'package:flutter_apps/emi_calculator_app/emi_calculator_screen.dart';
 
 void main() {
   runApp(const MainApp());
@@ -78,6 +80,16 @@ class HubScreen extends StatelessWidget {
             color: Colors.purple,
             onTap: () {
                 Navigator.push(context, MaterialPageRoute(builder: (_) => const ImageSpellingMatchScreen()));
+            },
+          ),
+          // EMI Calculator App
+          _buildAppCard(
+            context,
+            title: 'EMI Calculator',
+            icon: Icons.calculate_outlined,
+            color: Colors.teal,
+            onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (_) => const EMICalculatorScreen()));
             },
           ),
           ],
