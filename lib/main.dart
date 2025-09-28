@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_apps/kids_learning_application/screens/kids_hub_screen.dart';
 // Import path for the Math Learning App
 import 'package:flutter_apps/math_learning_app/math_learning_screen.dart';
+// Import path for the Image Spelling Match App
+import 'package:flutter_apps/image_spelling_match_app/image_spelling_match_screen.dart';
 
 void main() {
   runApp(const MainApp());
@@ -33,10 +35,20 @@ class HubScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Flutter Apps Hub'),
+        backgroundColor: Colors.indigo,
+        foregroundColor: Colors.white,
       ),
-      body: ListView(
-        padding: const EdgeInsets.all(16.0),
-        children: [
+      body: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [Colors.indigo, Colors.deepPurple],
+          ),
+        ),
+        child: ListView(
+          padding: const EdgeInsets.all(16.0),
+          children: [
           // This card launches your kids learning app
           _buildAppCard(
             context,
@@ -58,7 +70,18 @@ class HubScreen extends StatelessWidget {
                 Navigator.push(context, MaterialPageRoute(builder: (_) => const MathLearningScreen()));
             },
           ),
-        ],
+                  // Image Spelling Match App
+          _buildAppCard(
+            context,
+            title: 'Image Spelling Match',
+            icon: Icons.abc,
+            color: Colors.purple,
+            onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (_) => const ImageSpellingMatchScreen()));
+            },
+          ),
+          ],
+        ),
       ),
     );
   }
